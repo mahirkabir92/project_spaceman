@@ -1,4 +1,4 @@
-//Initial References
+
 const letterContainer = document.getElementById("letter-container");
 const optionsContainer = document.getElementById("options-container");
 const userInputSection = document.getElementById("user-input-section");
@@ -7,7 +7,7 @@ const newGameButton = document.getElementById("new-game-button");
 const canvas = document.getElementById("canvas");
 const resultText = document.getElementById("result-text");
 
-//Options values for buttons
+//Define options for buttons
 let options = {
   Planets: [
     "Earth",
@@ -24,7 +24,7 @@ let count = 0;
 
 let chosenWord = "";
 
-// catergory button
+// display options for player to choose a catergory
 const displayOptions = () => {
   optionsContainer.innerHTML += `<h3>Choose Category</h3>`;
   let buttonCon = document.createElement("div");
@@ -34,7 +34,7 @@ const displayOptions = () => {
   optionsContainer.appendChild(buttonCon);
 };
 
-//Block all the Buttons
+//Block buttons
 const blocker = () => {
   let optionsButtons = document.querySelectorAll(".options");
   let letterButtons = document.querySelectorAll(".letters");
@@ -53,7 +53,7 @@ const blocker = () => {
 //Word Generator
 const generateWord = (optionValue) => {
   let optionsButtons = document.querySelectorAll(".options");
-  //If optionValur matches the button innerText then highlight the button
+  //highlight the button
   optionsButtons.forEach((button) => {
     if (button.innerText.toLowerCase() === optionValue) {
       button.classList.add("active");
@@ -72,17 +72,15 @@ const generateWord = (optionValue) => {
 
   //replace every letter with span containing dash
   let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
-
-  //Display each element as span
   userInputSection.innerHTML = displayItem;
 };
 
-//Initial Function (Called when page loads/user presses new game)
+//new game initalize
 const initializer = () => {
   winCount = 0;
   count = 0;
 
-  //Initially erase all content and hide letteres and new game button
+  
   userInputSection.innerHTML = "";
   optionsContainer.innerHTML = "";
   letterContainer.classList.add("hide");
@@ -93,22 +91,19 @@ const initializer = () => {
   for (let i = 65; i < 91; i++) {
     let button = document.createElement("button");
     button.classList.add("letters");
-    //Number to ASCII[A-Z]
+    //letters
     button.innerText = String.fromCharCode(i);
-    //character button click
+    //click letter
     button.addEventListener("click", () => {
       let charArray = chosenWord.split("");
       let dashes = document.getElementsByClassName("dashes");
-      //if array contains clciked value replace the matched dash with letter else dram on canvas
       if (charArray.includes(button.innerText)) {
         charArray.forEach((char, index) => {
-          //if character in array is same as clicked button
           if (char === button.innerText) {
-            //replace dash with letter
+            //display letter
             dashes[index].innerText = char;
-            //increment counter
+            //counter
             winCount += 1;
-            //if winCount equals word lenfth
             if (winCount == charArray.length) {
               resultText.innerHTML = `<h2 class='win-msg'>WINNER!!</h2><p>The word was <span>${chosenWord}</span></p>`;
               //block all buttons
@@ -147,7 +142,7 @@ const canvasCreator = () => {
   context.strokeStyle = "#000";
   context.lineWidth = 2;
 
-  //For drawing lines
+  //drawing lines
   const drawLine = (fromX, fromY, toX, toY) => {
     context.moveTo(fromX, fromY);
     context.lineTo(toX, toY);
@@ -197,7 +192,7 @@ const canvasCreator = () => {
   return { initialDrawing, head, body, leftArm, rightArm, leftLeg, rightLeg };
 };
 
-//drawing the stick figure
+//drawing the spaceman
 const drawMan = (count) => {
   let { head, body, leftArm, rightArm, leftLeg, rightLeg } = canvasCreator();
   switch (count) {

@@ -1,6 +1,6 @@
 * {
-    padding: 8px;
-    margin: 8px;
+    padding: 5px;
+    margin: auto;
     text-align: center;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
@@ -12,7 +12,7 @@
   }
   .container {
     font-size: 16px;
-    background-color: #ffffff;
+    background-color: #f8e8f4;
     width: 90vw;
     max-width: 34em;
     position: absolute;
@@ -29,12 +29,12 @@
   #options-container div {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin: 1.2em 0 2.4em 0;
+    justify-content: center;
+    margin: 1em 0 2em 0;
   }
   #options-container button {
     padding: 0.6em 1.2em;
-    border: 3px solid rgba(5, 16, 173, 0.992);
+    border: 3px solid #0932e7;
     background-color: #bd58a9b8;
     color: #000000;
     border-radius: 0.3em;
@@ -43,8 +43,8 @@
   }
   #options-container button:disabled {
     border: 3px solid #808080;
-    color: #808080;
-    background-color: #efefef;
+    color: #0932e7;
+    background-color: #bd58a9b8;
   }
   #options-container button.active {
     background-color: #a4a1ab;
@@ -56,13 +56,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.6em;
+    gap: 0.5em;
   }
   #letter-container button {
-    height: 2.4em;
-    width: 2.4em;
-    border-radius: 0.3em;
-    background-color: #ffffff;
+    height: 3em;
+    width: 3em;
+    border-radius: 0.5em;
+    background-color: #bd58a9b8;
     cursor: pointer;
   }
   .new-game-popup {
@@ -82,7 +82,7 @@
   #user-input-section {
     display: flex;
     justify-content: center;
-    font-size: 1.8em;
+    font-size: 2em;
     margin: 0.6em 0 1.2em 0;
   }
   canvas {
@@ -95,23 +95,24 @@
     display: none;
   }
   #result-text h2 {
-    font-size: 1.8em;
+    font-size: 3em;
     text-align: center;
   }
   #result-text p {
-    font-size: 1.25em;
-    margin: 1em 0 2em 0;
+    font-size: 3em;
+    margin: auto;
   }
   #result-text span {
     font-weight: 600;
+    color: #bd58a9b8;
   }
   #new-game-button {
-    font-size: 1.25em;
-    padding: 0.5em 1em;
-    background-color: #e4e0eb;
-    border: 3px solid #000000;
-    color: #fff;
-    border-radius: 0.2em;
+    font-size: 2em;
+    padding: 1em 1em;
+    background-color: #bd58a9b8;
+    border: 3px solid #0932e7;
+    color: black;
+    border-radius: 1em;
     cursor: pointer;
   }
   .win-msg {
