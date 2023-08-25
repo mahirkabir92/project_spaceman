@@ -25,15 +25,16 @@
   }
   #options-container {
     text-align: center;
+    margin: auto;
   }
   #options-container div {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 1em 0 2em 0;
+    margin: auto;
   }
   #options-container button {
-    padding: 0.6em 1.2em;
+    padding: 1em 2em;
     border: 3px solid #0932e7;
     background-color: #bd58a9b8;
     color: #000000;
@@ -57,6 +58,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.5em;
+    margin: auto;
   }
   #letter-container button {
     height: 3em;
@@ -83,7 +85,7 @@
     display: flex;
     justify-content: center;
     font-size: 2em;
-    margin: 0.6em 0 1.2em 0;
+    margin: auto;
   }
   canvas {
     display: block;
@@ -103,7 +105,7 @@
     margin: auto;
   }
   #result-text span {
-    font-weight: 600;
+    font-weight: 700;
     color: #bd58a9b8;
   }
   #new-game-button {
