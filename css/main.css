@@ -1,5 +1,5 @@
 * {
-    padding: 5px;
+    padding: 20px;
     margin: auto;
     text-align: center;
     box-sizing: border-box;
@@ -60,7 +60,7 @@
   }
   #letter-container button {
     height: 3em;
-    width: 3em;
+    width: 2em;
     border-radius: 0.5em;
     background-color: #bd58a9b8;
     cursor: pointer;
