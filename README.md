@@ -56,17 +56,22 @@ Project_Spaceman
     
 ## Wireframe
 1. Orginal Wireframe
+
 ![Alt text](<images/![Alt text](images:Wireframe.png).png>)
 
 2. Main Page
+
 ![Alt text](<images/![Alt text2](images:Wireframe.png).png>)
 
 3. Start Game
+
 ![Alt text](<images/![Alt text3](images:Wireframe.png).png>)
 
 4. Win Game
+
 ![Alt text](<images/![Alt text4](images:Wireframe.png).png>)
 
 5. Lose Game
+
 ![Alt text](<images/![Alt text1](images:Wireframe.png).png>)
 
